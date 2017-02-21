@@ -1,0 +1,27 @@
+{
+  "name": "Desktop Capture Example",
+  "description": "Show desktop media picker UI",
+  "version": "1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "http://localhost/*", "desktopCapture"
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "content_scripts": [
+    {
+    "matches": [ "http://*/*" ],
+    "js": [ "content-script.js" ]
+    }
+  ]
+}
+
